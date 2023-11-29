@@ -11,6 +11,8 @@ m = members(name='sofia', age=21)
 
 # print(getattr(m,choice,'oops'))
 
-choice = input('which ')
-value = 'name'
-print(setattr(m,choice,value))
+choice = input('which value do you want to change: ')
+value = input('what do you want it to be: ')
+
+setattr(m,choice,value)
+print(f'Her name is {m.name} and she is {m.age} years old')
