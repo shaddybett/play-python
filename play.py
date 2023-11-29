@@ -6,5 +6,8 @@ class members:
         return f'Her name is {self.name} and she is {self.age} years old'
     
 m = members(name='sofia', age=21) 
-print(m)       
-    
+# print(m)    
+choice = input('Who is she: ')
+
+setattr(m,choice,'oops')
+print(m)
