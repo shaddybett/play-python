@@ -6,10 +6,10 @@ class members:
         return f'Her name is {self.name} and she is {self.age} years old'
     
 m = members(name='sofia', age=21) 
-# print(m)    
-# choice = input('Who is she: ')
+print(m)    
+choice = input('Who is she: ')
 
-# print(getattr(m,choice,'oops'))
+print(getattr(m,choice,'oops'))
 
 choice = input('which value do you want to change: ')
 value = input('what do you want it to be: ')
