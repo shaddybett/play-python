@@ -7,8 +7,10 @@ class members:
     
 m = members(name='sofia', age=21) 
 # print(m)    
-choice = input('Who is she: ')
+# choice = input('Who is she: ')
 
-print(getattr(m,choice,'oops'))
+# print(getattr(m,choice,'oops'))
+
+choice = input('which ')
 value = 'name'
 print(setattr(m,choice,value))
