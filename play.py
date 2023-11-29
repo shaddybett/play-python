@@ -13,3 +13,4 @@ student3 = students('Alfa',19)
 print(student2)
 
 choice = input('what do you want: ')
+print(getattr())
