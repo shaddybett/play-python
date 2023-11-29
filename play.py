@@ -10,7 +10,9 @@ student1 = students('Anto', 20)
 student2 = students('Bett',18)
 student3 = students('Alfa',19)
 
-print(student2)
+# print(student2)
 
 choice = input('what do you want: ')
-print(getattr())
+value = input('What do you want to input:')
+setattr()
+# print(getattr(student1,choice,'oopsie!'))
