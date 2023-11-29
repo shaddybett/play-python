@@ -3,6 +3,6 @@ class members:
         self.name = name
         self.age = age
     def __str__(self) -> str:
-        return 
+        return f''
 m = members(name='sofia', age=21) 
 print(m)       
