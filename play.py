@@ -12,7 +12,9 @@ student3 = students('Alfa',19)
 
 # print(student2)
 
-choice = input('what do you want: ')
+choice = input('what do you want to change: ')
 value = input('What do you want to input:')
-setattr()
+setattr(student2,choice,value)
+print(student2)
+i = 1
 # print(getattr(student1,choice,'oopsie!'))
