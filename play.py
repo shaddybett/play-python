@@ -15,4 +15,4 @@ choice = input('which value do you want to change: ')
 value = input('what do you want it to be: ')
 
 setattr(m,choice,value)
-print(f'Her name is {members.name} and she is {members.age} years old')
+print(f'Her name is {m.name} and she is {m.age} years old')
