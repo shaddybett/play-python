@@ -1,7 +1,5 @@
-CREATE TABLE members (
-    id INTEGER PRIMARY KEY,
-    name VARCHAR(200) NOT NULL CHECK(LENGTH(name) > 4),
-    email VARCHAR(200) NOT NULL UNIQUE CHECK(LENGTH(email) > 4),
-    phone INTEGER NOT NULL UNIQUE,
-    understood TEXT CHECK(understood IN ('YES', 'NO', 'LOST')) DEFAULT 'NO' NOT NULL
-);
+
+
+ALTER TABLE members ADD COLUMN 
+parent_name VARCHAR(60)
+
