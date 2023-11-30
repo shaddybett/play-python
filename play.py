@@ -19,17 +19,23 @@
 # print(getattr(student1,choice,'oopsie!'))
 
 def guessing_game():
-    guess = int(input('Make your guess: '))
+    
     guesses = 0
     winning_number = 7
     number_of_trials = 3
-    while guess == number_of_trials:
-        guesses +=1        
-    if guess == winning_number:
-        print('You won')
-    else:
-        guesses.append(guess)
-    guesses +=1    
+    while guesses != number_of_trials:
+        guess = int(input('Make your guess: '))
+
+        if guess == winning_number:
+
+            print('You won') 
+            break
+        elif guess != winning_number & guesses != number_of_trials:
+            print('please try again')               
+        else:
+            print('game over')
+            break
+        guesses += 1    
 guessing_game()      
 
 
