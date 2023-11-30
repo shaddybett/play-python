@@ -25,6 +25,16 @@
       "driver": "SQLite",
       "database": "${workspaceFolder:database-prac}/alfa/alfa.db",
       "name": "alferious"
+    },
+    {
+      "previewLimit": 50,
+      "server": "db.mmwhzmciauyghshdkkqi.supabase.co",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Betts",
+      "database": "postgres",
+      "username": "postgres",
+      "password": "shady42635509"
     }
   ]
 }
