@@ -47,3 +47,9 @@ VALUES
 (1,'Mich',1,1)
 
 SELECT * FROM student;
+JOIN parent_id
+ON parent_id = student_id
+JOIN address_id
+ON address_id = student_id
+JOIN subject_id 
+ON subject_id = student_id
