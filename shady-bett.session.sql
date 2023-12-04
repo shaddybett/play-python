@@ -45,3 +45,5 @@ VALUES
 INSERT INTO student(id,name,parent_id,address_id)
 VALUES
 (1,'Mich',1,1)
+
+SELECT * FROM student;
