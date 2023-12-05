@@ -25,6 +25,9 @@ CREATE TABLE park(
 INSERT INTO locations(id, country)
 VALUES (1, 'Tanzania'),
     (2, 'Kenya');
+INSERT INTO cub(id, name, lion_id)
+VALUES (1, 'Shibli', 1),
+    (2, 'Bob', NULL);
 INSERT INTO lion(id, name, cub_id)
 VALUES (1, 'Simba', 1),
     (2, 'Mufasa', NULL);
@@ -34,7 +37,6 @@ VALUES (1, 'Lion', 1),
 INSERT INTO park(id, name, locations_id, animals_id)
 VALUES (1, 'Kruger', 1, 1),
     (2, 'Tsavo', 2, 2);
-
 -- JOIN Statements
 SELECT *
 FROM locations
