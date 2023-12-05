@@ -34,9 +34,7 @@ VALUES (1, 'Lion', 1),
 INSERT INTO park(id, name, locations_id, animals_id)
 VALUES (1, 'Kruger', 1, 1),
     (2, 'Tsavo', 2, 2);
-INSERT INTO cub(id, name, lion_id)
-VALUES (1, 'Shibli', 1),
-    (2, 'Bob', NULL);
+
 -- JOIN Statements
 SELECT *
 FROM locations
