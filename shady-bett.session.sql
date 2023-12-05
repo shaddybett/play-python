@@ -27,12 +27,13 @@ CREATE TABLE park(
 INSERT INTO locations(id, country)
 VALUES (1, 'Tanzania'),
     (2, 'Kenya');
+INSERT INTO animals(id, name, top_animal)
+VALUES (1, 'Lion', 1),
+    (2, 'Skunk', NULL);    
 INSERT INTO park(id, name, locations_id, animals_id)
 VALUES (1, 'Kruger', 1, 1),
     (2, 'Tsavo', 2, 2);
-INSERT INTO animals(id, name, top_animal)
-VALUES (1, 'Lion', 1),
-    (2, 'Skunk', NULL);
+
 INSERT INTO lion(id, name, cub_id)
 VALUES (1, 'Simba', 1),
     (2, 'Mufasa', NULL);
