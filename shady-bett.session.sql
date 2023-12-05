@@ -22,21 +22,18 @@ CREATE TABLE park(
     locations_id INTEGER REFERENCES locations (id),
     animals_id INTEGER REFERENCES animals (id)
 );
-
-
 INSERT INTO locations(id, country)
 VALUES (1, 'Tanzania'),
     (2, 'Kenya');
-INSERT INTO animals(id, name, top_animal)
-VALUES (1, 'Lion', 1),
-    (2, 'Skunk', NULL);    
-INSERT INTO park(id, name, locations_id, animals_id)
-VALUES (1, 'Kruger', 1, 1),
-    (2, 'Tsavo', 2, 2);
-
 INSERT INTO lion(id, name, cub_id)
 VALUES (1, 'Simba', 1),
     (2, 'Mufasa', NULL);
+INSERT INTO animals(id, name, top_animal)
+VALUES (1, 'Lion', 1),
+    (2, 'Skunk', NULL);
+INSERT INTO park(id, name, locations_id, animals_id)
+VALUES (1, 'Kruger', 1, 1),
+    (2, 'Tsavo', 2, 2);
 INSERT INTO cub(id, name, lion_id)
 VALUES (1, 'Shibli', 1),
     (2, 'Bob', NULL);
