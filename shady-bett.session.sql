@@ -4,7 +4,7 @@ CREATE TABLE locations(
 );
 CREATE TABLE cub(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(250) NOT NULL,
+    name VARCHAR(250) NOT NULL
  
 );
 CREATE TABLE lion(
