@@ -5,7 +5,7 @@ CREATE TABLE locations(
 CREATE TABLE cub(
     id SERIAL PRIMARY KEY,
     name VARCHAR(250) NOT NULL,
-    lion_id INTEGER REFERENCES lion(id)
+ 
 );
 CREATE TABLE lion(
     id SERIAL PRIMARY KEY,
@@ -26,9 +26,9 @@ CREATE TABLE park(
 INSERT INTO locations(id, country)
 VALUES (1, 'Tanzania'),
     (2, 'Kenya');
-INSERT INTO cub(id, name, lion_id)
-VALUES (1, 'Shibli', 1),
-    (2, 'Bob', NULL);
+INSERT INTO cub(id, name)
+VALUES (1, 'Shibli'),
+    (2, 'Bob');
 INSERT INTO lion(id, name, cub_id)
 VALUES (1, 'Simba', 1),
     (2, 'Mufasa', NULL);
