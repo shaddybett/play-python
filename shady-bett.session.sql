@@ -5,7 +5,6 @@ CREATE TABLE locations(
 CREATE TABLE cub(
     id SERIAL PRIMARY KEY,
     name VARCHAR(250) NOT NULL,
-    lion_id INTEGER REFERENCES lion (id)
 );
 CREATE TABLE lion(
     id SERIAL PRIMARY KEY,
