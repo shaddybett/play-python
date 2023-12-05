@@ -39,9 +39,10 @@ INSERT INTO park(id, name, locations_id, animals_id)
 VALUES (1, 'Kruger', 1, 1),
     (2, 'Tsavo', 2, 2);
 -- JOIN Statements
-SELECT *
+SELECT locations.country, park.name AS park_name
 FROM locations
-    INNER JOIN park ON park.locations_id = locations.id;
+INNER JOIN park ON park.locations_id = locations.id;
+
 SELECT *
 FROM animals
     INNER JOIN lion ON lion.id = animals.top_animal;
