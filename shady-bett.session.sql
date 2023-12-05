@@ -5,7 +5,6 @@ CREATE TABLE locations(
 CREATE TABLE cub(
     id SERIAL PRIMARY KEY,
     name VARCHAR(250) NOT NULL
- 
 );
 CREATE TABLE lion(
     id SERIAL PRIMARY KEY,
@@ -39,16 +38,19 @@ INSERT INTO park(id, name, locations_id, animals_id)
 VALUES (1, 'Kruger', 1, 1),
     (2, 'Tsavo', 2, 2);
 -- JOIN Statements
-SELECT locations.country, park.name AS park_name
+SELECT locations.country,
+    park.name AS park_name
 FROM locations
-INNER JOIN park ON park.locations_id = locations.id;
-
-SELECT *
+    INNER JOIN park ON park.locations_id = locations.id;
+SELECT animals.name AS animal_name,
+    lion.name AS lion_name
 FROM animals
     INNER JOIN lion ON lion.id = animals.top_animal;
-SELECT *
+SELECT lion.name AS lion_name,
+    cub.name AS cub_name
 FROM lion
-    INNER JOIN cub ON lion.id = cub.id;
-SELECT *
+    INNER JOIN cub ON lion.cub_id = cub.id;
+SELECT cub.name AS cub_name,
+    lion.name AS lion_name
 FROM cub
-    INNER JOIN lion ON cub.id = lion.id;
+    INNER JOIN lion ON cub.id = lion.cub_id;
