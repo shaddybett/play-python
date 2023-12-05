@@ -47,7 +47,7 @@ FROM animals
     INNER JOIN lion ON lion.id = animals.top_animal;
 SELECT *
 FROM lion
-    INNER JOIN cub ON lion.id = cub.lion_id;
+    INNER JOIN cub ON lion.id = cub.id;
 SELECT *
 FROM cub
-    INNER JOIN lion ON cub.lion_id = lion.id;
+    INNER JOIN lion ON cub.id = lion.id;
