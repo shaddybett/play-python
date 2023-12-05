@@ -6,10 +6,7 @@ CREATE TABLE location(
     id SERIAL PRIMARY KEY,
     code INTEGER
 )
-CREATE TABLE park(
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(250) NOT NULL
-)
+
 CREATE TABLE park(
     id SERIAL PRIMARY KEY,
     name VARCHAR(250) NOT NULL
