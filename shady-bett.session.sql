@@ -30,7 +30,7 @@ VALUES (1, 'Shibli'),
     (2, 'Bob');
 INSERT INTO lion(id, name, cub_id)
 VALUES (1, 'Simba', 1),
-    (2, 'Mufasa', NULL);
+    (2, 'Mufasa', 2);
 INSERT INTO animals(id, name, top_animal)
 VALUES (1, 'Lion', 1),
     (2, 'Skunk', NULL);
