@@ -4,7 +4,10 @@ CURSOR = CONN.CURSOR
 
 class Dog:
     pets = []
-    def __init__(self,name,breed) -> None:
+    def __init__(self,name,breed):
         self.name = name
         self.breed = breed
         .add_pets_to_pets(self)
+
+    @classmethod
+    def 
