@@ -21,5 +21,9 @@ class Dog:
         """
     def insert(self):
         """
-        INSERT INTO pets
+        INSERT INTO pets(name,breed)
+        VALUES
+        (?,?)
         """    
+    def save(self):
+            
