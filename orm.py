@@ -17,13 +17,7 @@ class Dog:
 
     @classmethod
     def create_table(cls):
-        """
-        CREATE TABLE IF NOT EXISTS pets (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        breed TEXT
-        );
-        """
+
         # Corrected: Added the execution of the SQL statement
         sql = """
             CREATE TABLE IF NOT EXISTS pets (
@@ -36,10 +30,7 @@ class Dog:
         CONN.commit()
 
     def insert(self):
-        """
-        INSERT INTO pets (name, breed)
-        VALUES (?, ?)
-        """
+
         # Corrected: Added the execution of the SQL statement
         sql = """
             INSERT INTO pets (name, breed)
