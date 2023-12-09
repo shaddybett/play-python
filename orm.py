@@ -4,4 +4,4 @@ CURSOR = CONN.CURSOR
 
 class Dog:
     def __init__(self,name,breed) -> None:
-        pass
+        self.name = name
