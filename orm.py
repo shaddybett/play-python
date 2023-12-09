@@ -19,3 +19,7 @@ class Dog:
         breed TEXT
         );
         """
+    def insert(self):
+        """
+        INSERT INTO pets
+        """    
