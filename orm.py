@@ -44,4 +44,6 @@ class Dog:
         CONN.commit()
 
 Dog.create_table()
-my_dog = Dog(name='Jojo',breed='T9')      
+my_dog = Dog(name='Jojo',breed='T9')
+my_dog.insert()
+CONN.commit()      
