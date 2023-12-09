@@ -12,9 +12,11 @@ CONN = sqlite3.connect('db/play.db')
 # we make a cursor used to execute sql commands
 CURSOR = CONN.cursor()
 
+# we make a class
 class Dog:
- 
+# create an instance for the dog 
     def __init__(self, name, breed):
+        # make the dog's attributes
         self.id = None
         self.name = name
         self.breed = breed
