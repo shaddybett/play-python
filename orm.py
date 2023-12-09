@@ -1,6 +1,6 @@
 import sqlite3
 CONN = sqlite3.connect('db/ormpets.db')
-CURSOR = CONN.cursor
+CURSOR = CONN.cursor()
 
 class Dog:
     def __init__(self,name,breed):
@@ -9,24 +9,27 @@ class Dog:
         self.breed = breed
 
     @classmethod
-    def create_table(self):
+    def create_table(cls):
 
         sql = """
         CREATE TABLE IF NOT EXISTS pets(
             id INTEGER PRIMARY KEY,
             name TEXT,
             breed TEXT        
-        );
+        )
         """
-        CURSOR(sql) 
-        CONN.commit   
+        CURSOR.execute(sql)
+        CONN.commit()
+   
     def insert(self):
         sql = """
             INSERT INTO pets(name,breed)
             VALUES
             (?,?)
-       """    
-        CURSOR(sql,('name','breed'))
-        CONN.commit
-        
+       """  
+        CURSOR.execute(sql(self.name,self.breed))
+        CONN.commit()  
+
+    def save(self):
+        CONN.commit()    
         
