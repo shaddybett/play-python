@@ -2,12 +2,25 @@ import sqlite3
 CONN = sqlite3('db/play.db')
 CURSOR = CONN.CURSOR
 
+
+
+        
+
 class Dog:
-    pets = []
+ 
     def __init__(self,name,breed):
+        self.id = None
         self.name = name
         self.breed = breed
-        .add_pets_to_pets(self)
+      
 
     @classmethod
-    def 
+    def create_table(self):
+        """
+        CREATE TABLE IF NOT EXISTS pets(
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        breed TEXT
+        );
+        
+        """
