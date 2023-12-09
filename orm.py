@@ -3,4 +3,5 @@ CONN = sqlite3('db/play.db')
 CURSOR = CONN.CURSOR
 
 class Dog:
-    
+    def __init__(self) -> None:
+        pass
