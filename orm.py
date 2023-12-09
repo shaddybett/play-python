@@ -12,11 +12,11 @@ class Dog:
     def create_table(cls):
 
         sql = """
-        CREATE TABLE IF NOT EXISTS pets(
-            id INTEGER PRIMARY KEY,
-            name TEXT,
-            breed TEXT        
-        )
+            CREATE TABLE IF NOT EXISTS pets(
+                id INTEGER PRIMARY KEY,
+                name TEXT,
+                breed TEXT        
+            )
         """
         CURSOR.execute(sql)
         CONN.commit()
@@ -24,10 +24,9 @@ class Dog:
     def insert(self):
         sql = """
             INSERT INTO pets(name,breed)
-            VALUES
-            (?,?)
-       """  
-        CURSOR.execute(sql(self.name,self.breed))
+            VALUES(?,?)
+        """  
+        CURSOR.execute(sql,(self.name,self.breed))
         CONN.commit()  
 
     def save(self):
