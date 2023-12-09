@@ -42,8 +42,16 @@ class Dog:
     def save(self):
         # Corrected: Changed 'CURSOR.save' to 'CONN.commit' to save changes to the database
         CONN.commit()
+    @classmethod
+    def fetch_all(cls):
+        sql = 'SELECT * FROM pets'
+        return CURSOR.fetchall()     
 
 Dog.create_table()
 my_dog = Dog(name='Jojo',breed='T9')
 my_dog.insert()
-CONN.commit()      
+CONN.commit()  
+
+all_dogs = Dog.fetch_all()
+for dog in all_dogs:
+    print(dog)
