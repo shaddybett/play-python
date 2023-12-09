@@ -1,11 +1,15 @@
+# first we import sqlite3
 import sqlite3
+# we then import os which helps in navigation to the db directory
 import os
 
 # Get the absolute path to the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Corrected: sqlite3.connect instead of sqlite3
+# we make a connection to the database which for our case is play.db
 CONN = sqlite3.connect('db/play.db')
+# we make a cursor used to execute sql commands
 CURSOR = CONN.cursor()
 
 class Dog:
