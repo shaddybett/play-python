@@ -32,3 +32,7 @@ firstName = 'Master'
 lastName = 'Bett'
 profileName = 'masterBett'
 email = 'Bett@gmail.com'
+
+user = users(firstName,lastName,profileName,email)
+session.add(user)
+session.commit()
