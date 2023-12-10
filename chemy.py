@@ -50,10 +50,10 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-firstName = 'John'
-lastName = 'Mole'
-profileName = 'Jmole'
-email = 'Jmole@gmail.com'
+firstName = 'clark'
+lastName = 'lone'
+profileName = 'Clone'
+email = 'Clone@gmail.com'
 addUser(firstName,lastName,profileName,email,session)
 
 
