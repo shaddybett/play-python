@@ -49,7 +49,9 @@ session.add(user)
 session.commit()
 print('user added to database')
 
-# 
+# create a post
 userId = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
-postId = 12122
 postContent = 'hey its a sunny day today!'
+newPost = posts(userId,postContent)
+session.add(newPost)
+session.commit()
