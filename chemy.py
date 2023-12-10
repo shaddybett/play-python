@@ -31,7 +31,7 @@ class posts(Base):
         self.postContent = postContent
 
 def addUser(firstName,lastName,profileName,email,session):
-    exist = session.query(users).fiter(users.email==email).all()
+    exist = session.query(users).filter(users.email==email).all()
     if len(exist)>0:
         print('Email already exists!')
     else:
@@ -53,12 +53,14 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-firstName = 'clark'
-lastName = 'lone'
-profileName = 'Clone'
-email = 'Clone@gmail.com'
+firstName = 'Mich'
+lastName = 'tai'
+profileName = 'mTai'
+email = 'mTai@gmail.com'
+addUser(firstName,lastName,profileName,email,session)
 
 userId = "d03e7439-7e98-4246-9b29-43403d4af045"
 postContent = 'meet at the usual restaurnt later'
-addpost(userId,postContent,session)
+# addpost(userId,postContent,session)
+
 
