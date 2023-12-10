@@ -37,7 +37,7 @@ def addUser(firstName,lastName,profileName,email,session):
     print('user added to database')
             
             # add post
-def add_posts(session,userId,postContent):
+def addpost(session,userId,postContent):
     newPost = posts(userId,postContent)
     session.add(newPost)
     session.commit()
@@ -54,6 +54,9 @@ firstName = 'clark'
 lastName = 'lone'
 profileName = 'Clone'
 email = 'Clone@gmail.com'
-addUser(firstName,lastName,profileName,email,session)
+# addUser(firstName,lastName,profileName,email,session)
 
+userId = "586fc4c9-6633-4fcb-aee0-76bd231f94b1"
+postContent = 'I have a great day what a blessing!'
+addpost(userId,postContent,session)
 
