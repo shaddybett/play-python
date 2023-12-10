@@ -36,3 +36,4 @@ email = 'Bett@gmail.com'
 user = users(firstName,lastName,profileName,email)
 session.add(user)
 session.commit()
+print('user added to database')
