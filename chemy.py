@@ -39,15 +39,15 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 # user
-# firstName = 'Master'
-# lastName = 'Bett'
-# profileName = 'masterBett'
-# email = 'Bett@gmail.com'
+firstName = 'Master'
+lastName = 'Bett'
+profileName = 'masterBett'
+email = 'Bett@gmail.com'
 
-# user = users(firstName,lastName,profileName,email)
-# session.add(user)
-# session.commit()
-# print('user added to database')
+user = users(firstName,lastName,profileName,email)
+session.add(user)
+session.commit()
+print('user added to database')
 
 # create a post
 userId = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
