@@ -31,6 +31,7 @@ class posts:
         self.postID = postID
         self.postContent = postContent
         
+        
 
 db = 'sqlite:///socialDB.db'
 engine = create_engine(db)
