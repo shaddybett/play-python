@@ -15,5 +15,6 @@ class users:
     email = Column('email',String)
     profileName = Column('profileName',String)
 
-    def __init__(self) -> None:
+    def __init__(self,firstName,lastName,email,profileName):
+        
         
