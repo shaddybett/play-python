@@ -22,7 +22,7 @@ class users(Base):
         self.email = email
 class posts:
     __tablename__='posts'
-    userID = Column('userID',ForeignKey = '7ec03994-ba7f-4491-83e4-281bc8a107f0')
+    userID = Column('userID',ForeignKey =True,default=generate_uuid)
     postID = Column('postID',primary_key=True,default=generate_uuid)
     postContent = Column('postContent',String)
 
@@ -30,7 +30,7 @@ class posts:
         self.userID = userID
         self.postID = postID
         self.postContent = postContent
-        
+
         
 
 db = 'sqlite:///socialDB.db'
@@ -39,7 +39,7 @@ Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
-
+# user
 firstName = 'Master'
 lastName = 'Bett'
 profileName = 'masterBett'
@@ -49,3 +49,8 @@ user = users(firstName,lastName,profileName,email)
 session.add(user)
 session.commit()
 print('user added to database')
+
+# 
+userID = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
+postID = 12122
+postContent = 'hey its a sunny day today!'
