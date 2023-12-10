@@ -20,3 +20,7 @@ class users(Base):
         self.lastName = lastName
         self.profileName = profileName
         self.email = email
+
+db = 'sqlite:///socialDB.db'
+engine = create_engine(db)
+Base.metadata.create_all(bind=engine)
