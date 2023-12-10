@@ -29,10 +29,13 @@ class posts(Base):
     def __init__(self,userId,postContent):
         self.userId = userId
         self.postContent = postContent
+
+
 class likes(Base):
     __tablename__ = 'likes'
     userId = Column('userId',String,ForeignKey(users.userID),default=generate_uuid)
-    
+    likedId = Column('likedId',String,primary_key=True,default=generate_uuid)
+    postId = Column('postId',String,ForeignKey(''))
 
 
 def addUser(firstName,lastName,profileName,email,session):
