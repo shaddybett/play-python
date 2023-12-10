@@ -23,3 +23,5 @@ class users:
         
 
 db = 'sqlite:///socialDB.db'
+engine = create_engine(db)
+Base.metadata
