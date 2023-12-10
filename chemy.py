@@ -36,6 +36,8 @@ def addUser(firstName,lastName,profileName,email,session):
     session.commit()
     print('user added to database')
             
+
+            
             # add post
 def addpost(userId,postContent,session):
     newPost = posts(userId,postContent)
