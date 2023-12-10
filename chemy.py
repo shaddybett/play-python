@@ -1,27 +1,29 @@
-from sqlalchemy import create_engine,ForeignKey,INTEGER,Column,String
+from sqlalchemy import create_engine,ForeignKey,String,Integer,Column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import uuid
 
-Base = declarative_base
+Base = declarative_base()
 def generate_uuid():
     return str(uuid.uuid4())
 
-class users:
+class users(Base):
     __tablename__= 'users'
     userID = Column('userID',String,primary_key=True,default=generate_uuid)
-    firstName = Column('firstName',String)
+    firstName = Column('firstName', String)
     lastName = Column('lastName',String)
-    email = Column('email',String)
     profileName = Column('profileName',String)
-
-    def __init__(self,firstName,lastName,email,profileName):
+    email = Column('email',String)
+    
+    def __init__(self,firstName,lastName,profileName,email):
         self.firstName = firstName
         self.lastName = lastName
-        self.email = email
         self.profileName = profileName
-        
+        self.email = email
 
 db = 'sqlite:///socialDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
