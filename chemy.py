@@ -58,6 +58,13 @@ def addpost(userId,postContent,session):
     session.commit()
     print('all good')
 
+def addLike(userId,postId):
+    like = likes(userId,postId)
+    session.add(like)
+    session.commit()
+    print('wow liked!')
+
+
 db = 'sqlite:///socialDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
@@ -72,13 +79,14 @@ email = 'mTai@gmail.com'
 # addUser(firstName,lastName,profileName,email,session)
 
 userId = "d03e7439-7e98-4246-9b29-43403d4af045"
+postId = '3f0f7a8c-dab3-4c02-a60f-b85dfc0eba46'
 postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
 
-allPosts = session.query(posts).filter(posts.userId == userId).all()
-postList = []
-for p in allPosts:
-    postList.append(p.postContent)
-print(postList)    
-
+# allPosts = session.query(posts).filter(posts.userId == userId).all()
+# postList = []
+# for p in allPosts:
+#     postList.append(p.postContent)
+# print(postList)    
+addLike(postId,userId)
 
