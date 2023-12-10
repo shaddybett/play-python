@@ -29,6 +29,11 @@ class posts(Base):
     def __init__(self,userId,postContent):
         self.userId = userId
         self.postContent = postContent
+class likes(Base):
+    __tablename__ = 'likes'
+    userId = Column('userId',String,ForeignKey(users.userID),default=generate_uuid)
+    
+
 
 def addUser(firstName,lastName,profileName,email,session):
     exist = session.query(users).filter(users.email==email).all()
