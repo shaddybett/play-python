@@ -14,3 +14,9 @@ class users(Base):
     lastName = Column('lastName',String)
     profileName = Column('profileName',String)
     email = Column('email',String)
+    
+    def __init__(self,firstName,lastName,profileName,email):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.profileName = profileName
+        self.email = email
