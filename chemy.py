@@ -20,6 +20,17 @@ class users(Base):
         self.lastName = lastName
         self.profileName = profileName
         self.email = email
+class posts:
+    __tablename__='posts'
+    userID = Column('userID',ForeignKey = '7ec03994-ba7f-4491-83e4-281bc8a107f0')
+    postID = Column('postID',primary_key=True,default=generate_uuid)
+    postContent = Column('postContent',String)
+
+    def __init__(self,userID,postID,postContent):
+        self.userID = userID
+        self.postID = postID
+        self.postContent = postContent
+        
 
 db = 'sqlite:///socialDB.db'
 engine = create_engine(db)
