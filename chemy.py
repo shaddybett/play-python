@@ -78,7 +78,7 @@ profileName = 'mTai'
 email = 'mTai@gmail.com'
 # addUser(firstName,lastName,profileName,email,session)
 
-userId = "d03e7439-7e98-4246-9b29-43403d4af045"
+userId = "586fc4c9-6633-4fcb-aee0-76bd231f94b1"
 postId = '3f0f7a8c-dab3-4c02-a60f-b85dfc0eba46'
 postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
