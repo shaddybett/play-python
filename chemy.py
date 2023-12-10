@@ -21,3 +21,5 @@ class users:
         self.email = email
         self.profileName = profileName
         
+
+db = 'sqlite:///socialDB.db'
