@@ -57,10 +57,16 @@ firstName = 'Mich'
 lastName = 'tai'
 profileName = 'mTai'
 email = 'mTai@gmail.com'
-addUser(firstName,lastName,profileName,email,session)
+# addUser(firstName,lastName,profileName,email,session)
 
 userId = "d03e7439-7e98-4246-9b29-43403d4af045"
 postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
+
+allPosts = session.query(posts).filter(posts.userId == userId).all()
+postList = []
+for p in allPosts:
+    postList.append(p.postContent)
+print(postList)    
 
 
