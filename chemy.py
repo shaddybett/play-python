@@ -22,8 +22,8 @@ class users(Base):
         self.email = email
 class posts(Base):
     __tablename__='posts'
-    userId = Column('userId',ForeignKey('users.userID'),default=generate_uuid)
-    postId = Column('postId',primary_key=True,default=generate_uuid)
+    userId = Column('userId',String,ForeignKey('users.userID'),default=generate_uuid)
+    postId = Column('postId',String,primary_key=True,default=generate_uuid)
     postContent = Column('postContent',String)
 
     def __init__(self,userId,postContent):
@@ -39,15 +39,15 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 # user
-firstName = 'Master'
-lastName = 'Bett'
-profileName = 'masterBett'
-email = 'Bett@gmail.com'
+# firstName = 'Master'
+# lastName = 'Bett'
+# profileName = 'masterBett'
+# email = 'Bett@gmail.com'
 
-user = users(firstName,lastName,profileName,email)
-session.add(user)
-session.commit()
-print('user added to database')
+# user = users(firstName,lastName,profileName,email)
+# session.add(user)
+# session.commit()
+# print('user added to database')
 
 # create a post
 userId = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
@@ -55,3 +55,4 @@ postContent = 'hey its a sunny day today!'
 newPost = posts(userId,postContent)
 session.add(newPost)
 session.commit()
+print('all good')
