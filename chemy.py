@@ -20,15 +20,14 @@ class users(Base):
         self.lastName = lastName
         self.profileName = profileName
         self.email = email
-class posts:
+class posts(Base):
     __tablename__='posts'
-    userID = Column('userID',ForeignKey =True,default=generate_uuid)
-    postID = Column('postID',primary_key=True,default=generate_uuid)
+    userId = Column('userId',ForeignKey('users.userID'),default=generate_uuid)
+    postId = Column('postId',primary_key=True,default=generate_uuid)
     postContent = Column('postContent',String)
 
-    def __init__(self,userID,postID,postContent):
-        self.userID = userID
-        self.postID = postID
+    def __init__(self,userId,postContent):
+        self.userId = userId
         self.postContent = postContent
 
         
@@ -51,6 +50,6 @@ session.commit()
 print('user added to database')
 
 # 
-userID = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
-postID = 12122
+userId = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
+postId = 12122
 postContent = 'hey its a sunny day today!'
