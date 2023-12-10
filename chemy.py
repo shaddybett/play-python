@@ -16,5 +16,8 @@ class users:
     profileName = Column('profileName',String)
 
     def __init__(self,firstName,lastName,email,profileName):
-        
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.profileName = profileName
         
