@@ -30,7 +30,7 @@ class posts(Base):
         self.userId = userId
         self.postContent = postContent
 
-def addUser(session,firstName,lastName,profileName,email):
+def addUser(firstName,lastName,profileName,email,session):
     user = users(firstName,lastName,profileName,email)
     session.add(user)
     session.commit()
