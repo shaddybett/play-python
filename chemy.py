@@ -30,7 +30,18 @@ class posts(Base):
         self.userId = userId
         self.postContent = postContent
 
-        
+def addUser(session,firstName,lastName,profileName,email):
+    user = users(firstName,lastName,profileName,email)
+    session.add(user)
+    session.commit()
+    print('user added to database')
+            
+            # add post
+def add_posts(session,userId,postContent):
+    newPost = posts(userId,postContent)
+    session.add(newPost)
+    session.commit()
+    print('all good')
 
 db = 'sqlite:///socialDB.db'
 engine = create_engine(db)
@@ -38,21 +49,11 @@ Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
-# user
-firstName = 'Master'
-lastName = 'Bett'
-profileName = 'masterBett'
-email = 'Bett@gmail.com'
 
-user = users(firstName,lastName,profileName,email)
-session.add(user)
-session.commit()
-print('user added to database')
+firstName = 'John'
+lastName = 'Mole'
+profileName = 'Jmole'
+email = 'Jmole@gmail.com'
+addUser(firstName,lastName,profileName,email,session)
 
-# create a post
-userId = '7ec03994-ba7f-4491-83e4-281bc8a107f0'
-postContent = 'hey its a sunny day today!'
-newPost = posts(userId,postContent)
-session.add(newPost)
-session.commit()
-print('all good')
+
