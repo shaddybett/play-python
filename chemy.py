@@ -93,4 +93,3 @@ postContent = 'meet at the usual restaurnt later'
 postLikes = session.query(likes).filter(likes.postId==postId).all()
 print(len(postLikes))
 
-usersLikedPost = session.querry(users,likes).filter(likes.postId == postId)
