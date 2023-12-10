@@ -98,7 +98,7 @@ if __name__ == '__main__':
     postContent = 'Meet at the usual restaurant later'
     # addpost(userId, postContent, session)
 
-    addLike(userId, postId, session)
+    # addLike(userId, postId, session)
 
     postLikes = session.query(likes).filter(likes.postId == postId).all()
     print(len(postLikes))
