@@ -33,9 +33,13 @@ class posts(Base):
 
 class likes(Base):
     __tablename__ = 'likes'
-    userId = Column('userId',String,ForeignKey(users.userID),default=generate_uuid)
+    userId = Column('userId',String,ForeignKey('users.userID'),default=generate_uuid)
     likedId = Column('likedId',String,primary_key=True,default=generate_uuid)
-    postId = Column('postId',String,ForeignKey(''))
+    postId = Column('postId',String,ForeignKey('posts.postId'),default=generate_uuid)
+
+    def __init__(self,userId,postId):
+        self.userId = userId
+        self.postId = postId
 
 
 def addUser(firstName,lastName,profileName,email,session):
