@@ -10,8 +10,6 @@ class student(Base):
     studentId = Column(Integer,primary_key=True),
     studentName = Column(String),
     studentAge = Column(Integer)
-session.commit(student)
-session.close()
+
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
-session.add()
