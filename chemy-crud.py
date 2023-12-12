@@ -6,6 +6,7 @@ Base = declarative_base()
 Session = sessionmaker
 session = Session()
 
+db = 'sqlite3 ///:bestDB.db'
 class student(Base):
     __tablename__ = 'students'
     studentId = Column(Integer,primary_key=True),
