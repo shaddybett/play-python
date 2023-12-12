@@ -20,6 +20,9 @@ def addStudent(studentAge,studentName):
         print('Name already exists')
     else:
         list = student(studentName,studentAge)
+        session.add(list)
+        session.commit()
+        print('Added a student')
 
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
