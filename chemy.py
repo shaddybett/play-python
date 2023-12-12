@@ -72,10 +72,10 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-firstName = 'Mich'
-lastName = 'tai'
-profileName = 'mTai'
-email = 'mTai@gmail.com'
+firstName = 'Mi'
+lastName = 'ta'
+profileName = 'mT'
+email = 'mTi@gmail.com'
 # addUser(firstName,lastName,profileName,email,session)
 
 userId = "586fc4c9-6633-4fcb-aee0-76bd231f94b1"
@@ -86,11 +86,10 @@ postContent = 'meet at the usual restaurnt later'
 # allPosts = session.query(posts).filter(posts.userId == userId).all()
 # postList = []
 # for p in allPosts:
-#     postList.append(p.postContent)
+    # postList.append(p.postContent)
 # print(postList)    
 # addLike(postId,userId)
 
 postLikes = session.query(likes).filter(likes.postId==postId).all()
 print(len(postLikes))
 
-usersLikedPost = session.querry(users,likes).filter(likes.postId == postId)
