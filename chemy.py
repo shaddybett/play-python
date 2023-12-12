@@ -83,7 +83,7 @@ postId = '3f0f7a8c-dab3-4c02-a60f-b85dfc0eba46'
 postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
 
-allPosts = session.query(posts).filter(posts.userId == userId).all()
+# allPosts = session.query(posts).filter(posts.userId == userId).all()
 # postList = []
 # for p in allPosts:
     # postList.append(p.postContent)
