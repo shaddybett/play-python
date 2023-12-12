@@ -11,8 +11,8 @@ engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 class Student(Base):
     __tablename__ = 'students'
-    studentId = Column(Integer,primary_key=True),
-    studentName = Column(String),
+    studentId = Column(Integer,primary_key=True)
+    studentName = Column(String)
     studentAge = Column(Integer)
     def __init__(self,studentName,studentAge):
         self.studentId = None,
