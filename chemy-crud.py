@@ -9,7 +9,7 @@ session = Session()
 db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
-class student(Base):
+class Student(Base):
     __tablename__ = 'students'
     studentId = Column(Integer,primary_key=True),
     studentName = Column(String),
