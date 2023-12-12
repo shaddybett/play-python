@@ -12,4 +12,5 @@ class student(Base):
     studentAge = Column(Integer)
 session.commit(student)
 session.close()
-    
+old = session.query(student).filter(student.studentAge < 10).all()
+print()
