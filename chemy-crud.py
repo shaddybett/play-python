@@ -19,7 +19,7 @@ def addStudent(studentAge,studentName):
     if len(exist)>0:
         print('Name already exists')
     else:
-        list = student
+        list = student(studentName,studentAge)
 
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
