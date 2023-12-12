@@ -19,11 +19,11 @@ class Student(Base):
         self.studentName = studentName,
         self.studentAge = studentAge
 def addStudent(studentAge,studentName):
-    exist = session.query(student).filter(student.studentName == studentName).all()
+    exist = session.query(Student).filter(Student.studentName == studentName).all()
     if len(exist)>0:
         print('Name already exists')
     else:
-        list = student(studentName,studentAge)
+        list = Student(studentName,studentAge)
         session.add(list)
         session.commit()
         print('Added a student')
