@@ -80,7 +80,7 @@ email = 'mTi@gmail.com'
 
 userId = "586fc4c9-6633-4fcb-aee0-76bd231f94b1"
 postId = '3f0f7a8c-dab3-4c02-a60f-b85dfc0eba46'
-postContent = 'meet at the usual restaurnt later'
+# postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
 
 # allPosts = session.query(posts).filter(posts.userId == userId).all()
