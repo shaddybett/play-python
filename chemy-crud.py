@@ -10,11 +10,11 @@ class student(Base):
     studentId = Column(Integer,primary_key=True),
     studentName = Column(String),
     studentAge = Column(Integer)
-    def __init__(self,studentName,studentAge)
+    def __init__(self,studentName,studentAge):
         self.studentId = None,
         self.studentName = studentName,
         self.studentAge = studentAge
 def addStudent(studentAge,studentName):
-    
+    exist = session.querry()
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
