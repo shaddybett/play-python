@@ -6,7 +6,7 @@ Base = declarative_base()
 Session = sessionmaker
 session = Session()
 
-db = 'sqlite3 ///:bestDB.db'
+db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 class student(Base):
