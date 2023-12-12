@@ -15,8 +15,8 @@ class Student(Base):
     studentName = Column(String)
     studentAge = Column(Integer)
     def __init__(self,studentName,studentAge):
-        self.studentId = None,
-        self.studentName = studentName,
+        self.studentId = None
+        self.studentName = studentName
         self.studentAge = studentAge
 def addStudent(studentAge,studentName):
     exist = session.query(Student).filter(Student.studentName == studentName).all()
