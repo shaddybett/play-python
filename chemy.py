@@ -86,7 +86,7 @@ postContent = 'meet at the usual restaurnt later'
 # allPosts = session.query(posts).filter(posts.userId == userId).all()
 # postList = []
 # for p in allPosts:
-    postList.append(p.postContent)
+    # postList.append(p.postContent)
 # print(postList)    
 # addLike(postId,userId)
 
