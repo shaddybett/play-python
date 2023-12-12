@@ -74,7 +74,7 @@ session = Session()
 
 firstName = 'Mi'
 lastName = 'ta'
-profileName = 'mTai'
+profileName = 'mT'
 email = 'mTai@gmail.com'
 # addUser(firstName,lastName,profileName,email,session)
 
