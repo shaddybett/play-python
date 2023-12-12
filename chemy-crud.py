@@ -7,6 +7,8 @@ Session = sessionmaker
 session = Session()
 
 db = 'sqlite3 ///:bestDB.db'
+engine = create_engine(db)
+Base.metadata.create_all()
 class student(Base):
     __tablename__ = 'students'
     studentId = Column(Integer,primary_key=True),
