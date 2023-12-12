@@ -24,4 +24,4 @@ def addStudent(studentAge,studentName):
         session.commit()
         print('Added a student')
 
-
+db = 'sqlite3 ///:'
