@@ -84,7 +84,7 @@ postContent = 'meet at the usual restaurnt later'
 # addpost(userId,postContent,session)
 
 # allPosts = session.query(posts).filter(posts.userId == userId).all()
-postList = []
+# postList = []
 # for p in allPosts:
     # postList.append(p.postContent)
 # print(postList)    
