@@ -5,6 +5,7 @@ from sqlalchemy.orm import sessionmaker
 Base = declarative_base()
 Session = sessionmaker
 session = Session()
+
 class student(Base):
     __tablename__ = 'students'
     studentId = Column(Integer,primary_key=True),
@@ -24,4 +25,4 @@ def addStudent(studentAge,studentName):
         session.commit()
         print('Added a student')
 
-db = 'sqlite3 ///:bestDB.db'
+
