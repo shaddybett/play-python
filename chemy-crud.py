@@ -16,5 +16,6 @@ class student(Base):
         self.studentAge = studentAge
 def addStudent(studentAge,studentName):
     exist = session.querry(student).filter(student.studentName == studentName).all()
+    if 
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
