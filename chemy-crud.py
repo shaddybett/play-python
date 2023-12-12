@@ -6,4 +6,5 @@ Base = declarative_base()
 
 class student(Base):
     __tablename__ = 'students'
-    id 
+    studentId = Column(Integer,primary_key=True),
+    
