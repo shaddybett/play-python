@@ -10,6 +10,7 @@ class student(Base):
     studentId = Column(Integer,primary_key=True),
     studentName = Column(String),
     studentAge = Column(Integer)
-
+def addStudent(studentAge,studentName):
+    
 old = session.query(student).filter(student.studentAge < 10).all()
 print(old)
