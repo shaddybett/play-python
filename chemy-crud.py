@@ -13,4 +13,4 @@ class student(Base):
 session.commit(student)
 session.close()
 old = session.query(student).filter(student.studentAge < 10).all()
-print()
+print(old)
