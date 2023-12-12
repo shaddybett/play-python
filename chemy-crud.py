@@ -24,5 +24,4 @@ def addStudent(studentAge,studentName):
         session.commit()
         print('Added a student')
 
-old = session.query(student).filter(student.studentAge < 10).all()
-print(old)
+
