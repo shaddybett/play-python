@@ -72,7 +72,7 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-firstName = 'Mich'
+firstName = 'Mi'
 lastName = 'tai'
 profileName = 'mTai'
 email = 'mTai@gmail.com'
