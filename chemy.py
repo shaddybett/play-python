@@ -73,7 +73,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 firstName = 'Mi'
-lastName = 'tai'
+lastName = 'ta'
 profileName = 'mTai'
 email = 'mTai@gmail.com'
 # addUser(firstName,lastName,profileName,email,session)
