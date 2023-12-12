@@ -11,4 +11,5 @@ class student(Base):
     studentName = Column(String),
     studentAge = Column(Integer)
 session.commit(student)
-session.close()    
+session.close()
+    
