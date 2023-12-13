@@ -9,4 +9,4 @@ engine.metadata(bind=engine)
 
 class Student(Base):
     __tablename__='students'
-    
+    studentId = Column(Integer)
