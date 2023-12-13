@@ -34,4 +34,4 @@ class Book:
             new_book = Book(bookAuthor,bookName,bookPages)
             session.add(new_book)
             session.commit()
-    add_books =()            
+            print('New book added')          
