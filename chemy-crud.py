@@ -8,7 +8,7 @@ def generate_uuid():
 
 Base = declarative_base()
 
-db = 'sqlite:///best.db'
+db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 
@@ -35,10 +35,11 @@ def add_student(studentAge, studentEmail, studentName):
     else:
         new_student = Student(studentAge=studentAge, studentEmail=studentEmail, studentName=studentName)
         session.add(new_student)
-        print('New student added')
+        print('New Student added')
 
-# Example usage to add a new student to the database
+# Example usage to add a new Student to the database
 add_student(studentAge=20, studentEmail='Gofa@gmail.com', studentName='Gofa')
 
 # Commit the changes to the database
 session.commit()
+
