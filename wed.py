@@ -32,7 +32,8 @@ class Book:
         if len(exists)>0:
             print('Book already exists')
         else:
-            new_book = cls(bookAuthor,bookName,bookPages)
+            new_book = cls(bookAuthor=bookAuthor,bookName=bookName,bookPages=bookPages)
             session.add(new_book)
             session.commit()
             print('New book added')          
+Book.add_books('The Great Gatsby',1200,'F.scott Haddersfield')
