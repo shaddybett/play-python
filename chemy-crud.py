@@ -7,7 +7,7 @@ generate_id = uuid()
 Base = declarative_base()
 db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
-engine.metadata(bind=engine)
+engine.metadata.create_all(bind=engine)
 
 Session = sessionmaker()
 session = Session()
