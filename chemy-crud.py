@@ -20,4 +20,4 @@ class Student(Base):
         self.studentId = None
         self.studentAge = studentAge
         self.studentEmail = studentEmail
-        # self.studentName = studentName
+        self.studentName = studentName
