@@ -10,5 +10,5 @@ db = 'sqlite:///wedDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 
-Session = sessionmaker
+Session = sessionmaker(bind=engine)
 session = Session()
