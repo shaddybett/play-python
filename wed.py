@@ -31,4 +31,6 @@ class Book:
         if len(exists)>0:
             print('Book already exists')
         else:
-            
+            new_book = Book(bookAuthor,bookName,bookPages)
+            session.add(new_book)
+            session.commit()
