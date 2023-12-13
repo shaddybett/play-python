@@ -34,4 +34,4 @@ def addStudent(studentAge,studentEmail,studentId,studentName):
             session.add(newStudent)
             Session.commit
             print('Added new student')
-addStudent()            
+addStudent(20,)            
