@@ -25,7 +25,7 @@ class Student(Base):
         self.studentEmail = studentEmail
         self.studentName = studentName
 
-def addStudent(studentAge,studentEmail,studentId,studentName):
+def addStudent(studentAge,studentEmail,studentName):
         exists = session.query(Student).filter(Student.studentEmail == studentEmail).all()
         if len(exists) > 0:
             print('Email already exists')
@@ -34,4 +34,4 @@ def addStudent(studentAge,studentEmail,studentId,studentName):
             session.add(newStudent)
             Session.commit
             print('Added new student')
-addStudent(20,)            
+addStudent(20,'mark@gmail.com','Marcos')            
