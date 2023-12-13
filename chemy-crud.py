@@ -7,3 +7,6 @@ db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 engine.metadata(bind=engine)
 
+class Student(Base):
+    __tablename__='students'
+    studentId = Column(Integer)
