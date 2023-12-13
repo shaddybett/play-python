@@ -21,4 +21,4 @@ class Student(Base):
         self.studentAge = studentAge
         self.studentEmail = studentEmail
         self.studentName = studentName
-        
+    exists = session    
