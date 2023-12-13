@@ -8,4 +8,4 @@ def generate_uuid():
 Base = declarative_base
 db = create_engine()
 engine = create_engine(db)
-Base = metadata.
+Base = engine.metadata.create_all(Base)
