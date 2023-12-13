@@ -28,11 +28,11 @@ class Book:
         self.bookPages = bookPages
     @classmethod    
     def add_books(cls,bookName,bookPages,bookAuthor):
-        exists = session.query(Book).filter(Book.bookName == bookName).all()
+        exists = session.query(cls).filter(Book.bookName == bookName).all()
         if len(exists)>0:
             print('Book already exists')
         else:
-            new_book = Book(bookAuthor,bookName,bookPages)
+            new_book = cls(bookAuthor,bookName,bookPages)
             session.add(new_book)
             session.commit()
             print('New book added')          
