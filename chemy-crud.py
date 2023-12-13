@@ -13,3 +13,4 @@ class Student(Base):
     __tablename__='students'
     studentId = Column(Integer,primary_key=True,default=generate_id)
     studentName = Column(String)
+    studentEmail = Column(String)
