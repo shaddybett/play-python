@@ -15,3 +15,9 @@ class Student(Base):
     studentName = Column(String)
     studentEmail = Column(String)
     studentAge = Column(Integer)
+
+    def __init__(self,studentAge,studentEmail,studentName):
+        # self.studentId = None
+        # self.studentAge = studentAge
+        # self.studentEmail = studentEmail
+        # self.studentName = studentName
