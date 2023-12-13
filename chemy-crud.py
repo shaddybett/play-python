@@ -3,29 +3,5 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-Session = sessionmaker
-session = Session()
-
 db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
-Base.metadata.create_all(bind=engine)
-class Student(Base):
-    __tablename__ = 'students'
-    studentId = Column(Integer,primary_key=True)
-    studentName = Column(String)
-    studentAge = Column(Integer)
-    def __init__(self,studentName,studentAge):
-        self.studentId = None
-        self.studentName = studentName
-        self.studentAge = studentAge
-def addStudent(studentAge,studentName):
-    exist = session.query(Student).filter(Student.studentName == studentName).all()
-    if len(exist)>0:
-        print('Name already exists')
-    else:
-        list = Student(studentName,studentAge)
-        session.add(list)
-        session.commit()
-        print('Added a student')
-
-
