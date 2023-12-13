@@ -30,4 +30,5 @@ class Student(Base):
             print('Student already exists')
         else:
             studentList = Student(studentAge,studentEmail,studentName)
-                   
+            session.add(studentList)
+            Session.commit
