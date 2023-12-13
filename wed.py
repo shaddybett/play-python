@@ -6,9 +6,9 @@ import uuid
 def generate_uuid():
     return str (uuid.uuid4())
 Base = declarative_base
-db = 'sqlite:'
+db = 'sqlite:///wedDB.db'
 engine = create_engine(db)
-Base = engine.metadata.create_all(Base)
+Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker
 session = Session()
