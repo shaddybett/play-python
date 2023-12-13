@@ -21,5 +21,9 @@ class Book:
     bookPages = Column('bookPages',Integer)
     bookAuthor = Column('bookAuthor',String)
 
-    def __init__(self,bookName,bookPages,bookAuthor) -> None:
+    def __init__(self,bookName,bookPages,bookAuthor):
+        self.bookId = None
+        self.bookName = bookName
+        self.bookAuthor = bookAuthor
+        self.bookPages = bookPages
         pass
