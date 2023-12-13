@@ -11,5 +11,5 @@ engine.metadata(bind=engine)
 
 class Student(Base):
     __tablename__='students'
-    studentId = Column(Integer,)
+    studentId = Column(Integer,primary_key=True,)
     studentName = Column(String)
