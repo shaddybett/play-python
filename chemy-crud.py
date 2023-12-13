@@ -31,5 +31,7 @@ def addStudent(studentAge,studentEmail,studentId,studentName):
             print('Email already exists')
         else:
             newStudent = Student(studentAge,studentEmail,studentName)
-            session.add(studentList)
+            session.add(newStudent)
             Session.commit
+            print('Added new student')
+addStudent()            
