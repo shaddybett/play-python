@@ -34,7 +34,8 @@ def add_student(studentAge,studentEmail,studentName):
         print('Email already exists')
     else:
         new_student = Student(studentAge=20,studentEmail='Gofa@gmail.com',studentName='Gofa') 
-        session.add(new_student)          
+        session.add(new_student)  
+        print('new student added')        
 
 # Commit the changes to the database
 session.commit()
