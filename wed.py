@@ -27,4 +27,5 @@ Base = declarative_base()
 
 db = 'sqlite:///wedDB.db'
 engine = create_engine(db)
+Base.metadata.create_all
 
