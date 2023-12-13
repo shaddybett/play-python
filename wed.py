@@ -16,3 +16,4 @@ session = Session()
 
 class Book:
     __tablename__='books'
+    bookId = Column('bookId',)
