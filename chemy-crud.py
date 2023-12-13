@@ -24,4 +24,7 @@ class Student(Base):
         self.studentAge = studentAge
         self.studentEmail = studentEmail
         self.studentName = studentName
-    exists = session    
+
+        exists = session.query(Student).filter(Student.studentEmail == studentEmail).all()
+        if len(exists) > 0:
+                
