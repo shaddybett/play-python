@@ -20,3 +20,4 @@ class Book:
     bookName = Column('bookName',String)
     bookPages = Column('bookPages',Integer)
     bookAuthor = Column('bookAuthor',String)
+    
