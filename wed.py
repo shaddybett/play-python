@@ -19,3 +19,4 @@ class Book:
     bookId = Column('bookId',String,primary_key=True,default=generate_uuid)
     bookName = Column('bookName',String)
     bookPages = Column('bookPages',Integer)
+    bookAuthor = Column('bookAuthor',String)
