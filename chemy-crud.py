@@ -10,7 +10,7 @@ def generate_uuid():
 Base = declarative_base()
 db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
-engine.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker()
 session = Session()
