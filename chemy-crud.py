@@ -14,3 +14,4 @@ class Student(Base):
     studentId = Column(Integer,primary_key=True,default=generate_id)
     studentName = Column(String)
     studentEmail = Column(String)
+    studentAge = Column(Integer)
