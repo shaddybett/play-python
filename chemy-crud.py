@@ -27,4 +27,5 @@ class Student(Base):
 
         exists = session.query(Student).filter(Student.studentEmail == studentEmail).all()
         if len(exists) > 0:
+            
                 
