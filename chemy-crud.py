@@ -10,6 +10,7 @@ engine = create_engine(db)
 engine.metadata(bind=engine)
 
 Session = sessionmaker()
+session = Session()
 
 class Student(Base):
     __tablename__='students'
