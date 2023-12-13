@@ -13,3 +13,6 @@ Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
+
+class Book:
+    __tablename__='books'
