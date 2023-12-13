@@ -26,7 +26,8 @@ class Book:
         self.bookName = bookName
         self.bookAuthor = bookAuthor
         self.bookPages = bookPages
-    def add_books(bookName,bookPages,bookAuthor):
+    @classmethod    
+    def add_books(cls,bookName,bookPages,bookAuthor):
         exists = session.query(Book).filter(Book.bookName == bookName).all()
         if len(exists)>0:
             print('Book already exists')
