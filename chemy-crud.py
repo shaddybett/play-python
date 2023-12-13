@@ -12,7 +12,7 @@ db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 
-Session = sessionmaker()
+Session = sessionmaker(bind=engine)
 session = Session()
 
 class Student(Base):
