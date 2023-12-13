@@ -9,6 +9,8 @@ db = 'sqlite:///bestDB.db'
 engine = create_engine(db)
 engine.metadata(bind=engine)
 
+Session = sessionmaker()
+
 class Student(Base):
     __tablename__='students'
     studentId = Column(Integer,primary_key=True,default=generate_id)
