@@ -8,7 +8,7 @@ def generate_uuid():
 
 
 Base = declarative_base()
-db = 'sqlite:///bestDB.db'
+db = 'sqlite:///best.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 
