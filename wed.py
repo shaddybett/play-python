@@ -10,4 +10,5 @@ db = create_engine()
 engine = create_engine(db)
 Base = engine.metadata.create_all(Base)
 
-session = sessionmaker
+Session = sessionmaker
+session = Session()
