@@ -35,6 +35,6 @@ def add_Student(studentAge,studentEmail,studentName):
         else:
             new_Sudent = Student(studentAge,studentEmail,studentName)
             session.add(new_Sudent)
-            session.commit
+            session.commit()
             print('Added new student')
 add_Student(20,'mark@gmail.com','Marcos')            
