@@ -28,14 +28,17 @@ class Student(Base):
         self.studentEmail = studentEmail
         self.studentName = studentName
 
-def add_student(studentAge,studentEmail,studentName):
-    exists = session.query(Student).filter(Student.studentEmail == studentEmail).all
-    if len(exists)>0:
+def add_student(studentAge, studentEmail, studentName):
+    exists = session.query(Student).filter(Student.studentEmail == studentEmail).all()
+    if len(exists) > 0:
         print('Email already exists')
     else:
-        new_student = Student(studentAge=20,studentEmail='Gofa@gmail.com',studentName='Gofa') 
-        session.add(add_student)  
-        print('new student added')        
+        new_student = Student(studentAge=studentAge, studentEmail=studentEmail, studentName=studentName)
+        session.add(new_student)
+        print('New student added')
+
+# Example usage to add a new student to the database
+add_student(studentAge=20, studentEmail='Gofa@gmail.com', studentName='Gofa')
 
 # Commit the changes to the database
 session.commit()
