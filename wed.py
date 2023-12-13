@@ -30,3 +30,5 @@ class Book:
         exists = session.query(Book).filter(Book.bookName == bookName).all()
         if len(exists)>0:
             print('Book already exists')
+        else:
+                
