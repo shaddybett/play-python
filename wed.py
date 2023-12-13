@@ -16,4 +16,5 @@ session = Session()
 
 class Book:
     __tablename__='books'
-    bookId = Column('bookId',)
+    bookId = Column('bookId',String,primary_key=True,default=generate_uuid)
+    bookName = Column('bookName',String)
