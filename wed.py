@@ -22,3 +22,7 @@ import uuid
 
 def generate_uuid():
     return str (uuid.uuid4())
+
+Base = declarative_base()
+
+db = 'sqlite:///wedDB.db'
