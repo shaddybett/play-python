@@ -26,4 +26,5 @@ class Book:
         self.bookName = bookName
         self.bookAuthor = bookAuthor
         self.bookPages = bookPages
-        pass
+    def add_books(bookName,bookPages,bookAuthor):
+        exists = session.query(Book).filter()
