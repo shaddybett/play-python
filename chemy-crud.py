@@ -29,4 +29,5 @@ class Student(Base):
         if len(exists) > 0:
             print('Student already exists')
         else:
-            studentList =         
+            studentList = Student(studentAge,studentEmail,studentName)
+                   
