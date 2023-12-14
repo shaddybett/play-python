@@ -72,11 +72,11 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-firstName = 'Mi'
-lastName = 'ta'
-profileName = 'mT'
-email = 'mTi@gmail.com'
-# addUser(firstName,lastName,profileName,email,session)
+firstName = 'Lance'
+lastName = 'Kirwa'
+profileName = 'Laki'
+email = 'Laki@gmail.com'
+addUser(firstName,lastName,profileName,email,session)
 
 userId = "586fc4c9-6633-4fcb-aee0-76bd231f94b1"
 postId = '3f0f7a8c-dab3-4c02-a60f-b85dfc0eba46'
