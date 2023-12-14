@@ -36,4 +36,6 @@ class Book(Base):  # Inherit from Base
             print('New book added')          
 
 # Example usage:
-Book.add_books('The Great Gatsby', 1200, 'F. Scott Haddersfield')
+# Book.add_books('The Great Gatsby', 1200, 'F. Scott Haddersfield')
+
+
